@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html class="light" lang="mn"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BOOKSWAP - Тавтай морил</title>
+<!-- Google Fonts: Space Grotesk & Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-container-lowest": "#ffffff",
+            "on-tertiary-fixed-variant": "#005048",
+            "inverse-surface": "#283044",
+            "on-secondary-container": "#fffbff",
+            "inverse-primary": "#6bd8cb",
+            "inverse-on-surface": "#eef0ff",
+            "tertiary-fixed-dim": "#4fdbc8",
+            "on-secondary": "#ffffff",
+            "surface-container-low": "#f2f3ff",
+            "secondary": "#831ada",
+            "on-primary-container": "#f4fffc",
+            "on-error": "#ffffff",
+            "primary-fixed": "#89f5e7",
+            "primary-fixed-dim": "#6bd8cb",
+            "outline-variant": "#bcc9c6",
+            "on-surface-variant": "#3d4947",
+            "error-container": "#ffdad6",
+            "error": "#ba1a1a",
+            "outline": "#6d7a77",
+            "on-secondary-fixed-variant": "#6800b4",
+            "primary-container": "#008378",
+            "on-tertiary-container": "#f4fffb",
+            "surface": "#faf8ff",
+            "surface-tint": "#006a61",
+            "on-primary": "#ffffff",
+            "on-primary-fixed": "#00201d",
+            "on-surface": "#131b2e",
+            "surface-dim": "#d2d9f4",
+            "secondary-fixed-dim": "#ddb8ff",
+            "on-primary-fixed-variant": "#005049",
+            "tertiary-fixed": "#71f8e4",
+            "tertiary": "#00685d",
+            "surface-container-high": "#e2e7ff",
+            "on-background": "#131b2e",
+            "primary": "#00685f",
+            "on-tertiary-fixed": "#00201c",
+            "on-error-container": "#93000a",
+            "background": "#faf8ff",
+            "on-secondary-fixed": "#2c0051",
+            "secondary-fixed": "#f0dbff",
+            "secondary-container": "#9e41f5",
+            "surface-container-highest": "#dae2fd",
+            "surface-bright": "#faf8ff",
+            "tertiary-container": "#008376",
+            "on-tertiary": "#ffffff",
+            "surface-variant": "#dae2fd",
+            "surface-container": "#eaedff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-md": "1rem",
+            "space-xl": "2.5rem",
+            "margin": "3rem",
+            "margin-mobile": "1.25rem",
+            "space-sm": "0.5rem",
+            "gutter": "1.5rem",
+            "space-xs": "0.25rem",
+            "gutter-mobile": "1rem",
+            "space-lg": "1.5rem"
+          },
+          "fontFamily": {
+            "label-sm": ["Space Grotesk"],
+            "headline-sm": ["Space Grotesk"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "label-md": ["Space Grotesk"],
+            "headline-md": ["Space Grotesk"],
+            "display-xl": ["Space Grotesk"],
+            "title-md": ["Space Grotesk"],
+            "label-lg": ["Space Grotesk"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "headline-lg-mobile": ["Space Grotesk"],
+            "headline-lg": ["Space Grotesk"],
+            "display-xl-mobile": ["Space Grotesk"]
+          },
+          "fontSize": {
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "700" }],
+            "headline-sm": ["22px", { "lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "600" }],
+            "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+            "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }],
+            "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "display-xl": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+            "title-md": ["18px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "display-xl-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    /* Ambient glow & smooth mobile container */
+    .glow-teal {
+      box-shadow: 0 12px 32px -4px rgba(13, 148, 136, 0.18), 0 4px 12px -2px rgba(15, 23, 42, 0.04);
+    }
+    .glow-purple {
+      box-shadow: 0 20px 48px -8px rgba(147, 51, 234, 0.16), 0 8px 16px -4px rgba(15, 23, 42, 0.06);
+    }
+    .carousel-slide {
+      transition: opacity 0.35s ease, transform 0.35s ease;
+    }
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .hide-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface antialiased flex justify-center min-h-screen items-center p-0 sm:py-6 selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- Mobile Frame Container (390px optimized) -->
+<main class="w-full max-w-[390px] min-h-screen sm:min-h-[844px] bg-background relative flex flex-col justify-between overflow-hidden sm:rounded-[40px] shadow-2xl border-0 sm:border border-outline-variant/30">
+<!-- Atmospheric Ambient Background Orbs -->
+<div class="absolute -top-16 -left-16 w-64 h-64 bg-primary-fixed/40 rounded-full blur-3xl pointer-events-none -z-0"></div>
+<div class="absolute top-1/4 -right-20 w-72 h-72 bg-secondary-fixed/50 rounded-full blur-3xl pointer-events-none -z-0"></div>
+<div class="absolute -bottom-10 left-10 w-60 h-60 bg-primary-fixed-dim/30 rounded-full blur-3xl pointer-events-none -z-0"></div>
+<!-- Top Status Bar & Spark Header Badge -->
+<header class="relative z-10 pt-6 px-gutter-mobile flex justify-between items-center">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-lowest/80 backdrop-blur-md border border-secondary-fixed/60 shadow-sm">
+<span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="font-label-sm text-label-sm text-secondary tracking-wider font-semibold">BY SPARK TEAM</span>
+</div>
+<button aria-label="Мэдээлэл" class="w-9 h-9 rounded-full bg-surface-container-lowest/90 backdrop-blur-md border border-outline-variant/40 flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors active:scale-95">
+<span class="material-symbols-outlined text-[19px]">help_outline</span>
+</button>
+</header>
+<!-- Main Scrollable / Interactive Content Area -->
+<div class="relative z-10 flex-1 flex flex-col items-center px-gutter-mobile pt-3 pb-4">
+<!-- Logo Unit with Dual-tone Halo -->
+<div class="relative my-2 flex flex-col items-center group">
+<div class="absolute inset-0 bg-gradient-to-tr from-primary-fixed to-secondary-fixed rounded-3xl blur-xl opacity-70 group-hover:opacity-100 transition-opacity"></div>
+<div class="relative w-44 h-44 rounded-3xl overflow-hidden p-1.5 bg-surface-container-lowest/90 backdrop-blur-md shadow-lg border border-white/80 flex items-center justify-center">
+<img alt="BOOKSWAP Official Logo" class="w-full h-full object-contain rounded-2xl transform transition-transform duration-300 hover:scale-105" src="https://lh3.googleusercontent.com/aida/ALJJyrDTokCPg2zqB2YJEB-17sCWw2n1cSFRDqz0Ft9S7AJF0ut-JcZYmkZ-oYthryFvC5b2chcVGL_TuF4KAsyREUy-u-HL1nIMJO2NKg6NH9QkpDXvASJP53QbwTes92EfR0bufHUI5L3lu2P53YlQvkB0-SWiG5jyf6Kko6-zMU7d97sAGYkjpq3ikpzl_kPB84g53HSjP-nLmcPmESjJIbXQ_N_HRxYqqlreIaV0DXO-m6o3XcFFS-lFjzE"/>
+</div>
+</div>
+<!-- Motivating Headline in Mongolian -->
+<div class="text-center mt-3 px-2">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight leading-tight">
+          Номоо солилцож, <br/>
+<span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">шинэ ертөнцийг</span> нээцгээе
+        </h1>
+<p class="mt-2 font-body-sm text-body-sm text-on-surface-variant leading-relaxed max-w-[320px] mx-auto">
+          Монголын хамгийн том ном сонирхогч залуусын нэгдэл. Хүссэн номоо үнэгүй солилцоорой.
+        </p>
+</div>
+<!-- Social Proof Stats Pill -->
+<div class="mt-4 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-md border border-outline-variant/50 shadow-sm">
+<span class="flex h-2 w-2 relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold tracking-wide">
+          1,940+ бэлэн ном • 4,500+ уншигч
+        </span>
+</div>
+<!-- Dynamic Value Props Carousel Card -->
+<div class="w-full mt-4 relative">
+<div class="relative overflow-hidden w-full min-h-[110px]" id="benefit-slider">
+<!-- Slide 1: General Swap -->
+<div class="carousel-slide block w-full" data-index="0">
+<div class="bg-surface-container-lowest/95 backdrop-blur-md rounded-2xl p-3.5 border border-primary-fixed/40 shadow-sm flex items-start gap-3">
+<div class="w-10 h-10 rounded-xl bg-primary-fixed/40 text-primary flex-shrink-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">auto_stories</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-1.5">
+<h2 class="font-title-md text-[14px] text-on-surface font-bold">Шууд хайж олоод солилц</h2>
+<span class="text-[9px] font-label-sm px-1.5 py-0.5 rounded-full bg-primary-fixed text-primary font-bold">ХЯЛБАР</span>
+</div>
+<p class="font-body-sm text-[12px] text-on-surface-variant mt-0.5 leading-snug">
+                  Ойролцоох ном уншигчдаас хүссэн уран зохиол, хувь хүний хөгжлийн номуудыг хялбар ол.
+                </p>
+</div>
+</div>
+</div>
+<!-- Slide 2: High School Textbooks & Exams -->
+<div class="carousel-slide hidden w-full" data-index="1">
+<div class="bg-surface-container-lowest/95 backdrop-blur-md rounded-2xl p-3.5 border border-secondary-fixed/50 shadow-sm flex items-start gap-3">
+<div class="w-10 h-10 rounded-xl bg-secondary-fixed text-secondary flex-shrink-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">school</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-1.5">
+<h2 class="font-title-md text-[14px] text-on-surface font-bold">ЕБС сурах бичиг &amp; ЭЕШ</h2>
+<span class="text-[9px] font-label-sm px-1.5 py-0.5 rounded-full bg-secondary-fixed-dim text-on-secondary-fixed-variant font-bold">ОНЦГОЙ</span>
+</div>
+<p class="font-body-sm text-[12px] text-on-surface-variant mt-0.5 leading-snug">
+                  1-12-р ангийн сурах бичиг, ЭЕШ шалгалтын сорил хувилбаруудыг шууд солилцох боломж.
+                </p>
+</div>
+</div>
+</div>
+<!-- Slide 3: Secure & Trustworthy -->
+<div class="carousel-slide hidden w-full" data-index="2">
+<div class="bg-surface-container-lowest/95 backdrop-blur-md rounded-2xl p-3.5 border border-primary-fixed/40 shadow-sm flex items-start gap-3">
+<div class="w-10 h-10 rounded-xl bg-primary-fixed/50 text-primary flex-shrink-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-1.5">
+<h2 class="font-title-md text-[14px] text-on-surface font-bold">Итгэлтэй &amp; Аюулгүй</h2>
+<span class="text-[9px] font-label-sm px-1.5 py-0.5 rounded-full bg-primary-fixed text-primary font-bold">SPARK SCORE</span>
+</div>
+<p class="font-body-sm text-[12px] text-on-surface-variant mt-0.5 leading-snug">
+                  SPARK гишүүдийн итгэлцлийн оноо, нөхцөл байдлын үнэлгээтэй эрсдэлгүй солилцоо.
+                </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Carousel Indicators -->
+<div class="flex justify-center items-center gap-2 mt-2.5">
+<button aria-label="1-р хуудас" class="carousel-dot h-1.5 w-6 rounded-full bg-primary transition-all duration-300" onclick="goToSlide(0)"></button>
+<button aria-label="2-р хуудас" class="carousel-dot h-1.5 w-1.5 rounded-full bg-outline-variant transition-all duration-300" onclick="goToSlide(1)"></button>
+<button aria-label="3-р хуудас" class="carousel-dot h-1.5 w-1.5 rounded-full bg-outline-variant transition-all duration-300" onclick="goToSlide(2)"></button>
+</div>
+</div>
+</div>
+<!-- Bottom Action & Login Cluster -->
+<footer class="relative z-10 px-gutter-mobile pb-6 pt-2 bg-gradient-to-t from-background via-background/95 to-transparent">
+<!-- Primary Vibrant CTA Button -->
+<a class="w-full flex items-center justify-center gap-2 py-3.5 px-6 rounded-full bg-gradient-to-r from-primary via-primary-container to-secondary text-on-primary font-label-lg text-label-lg tracking-wide shadow-md active:scale-95 transition-all duration-200 hover:brightness-105 group" href="#explore">
+<span>Эхлэх / Ном үзэх</span>
+<span class="material-symbols-outlined text-lg transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+<!-- Secondary Sign In Option -->
+<div class="flex items-center justify-center mt-3.5 gap-1.5">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Бүртгэлтэй хэрэглэгч үү?</span>
+<a class="font-label-md text-label-md text-secondary hover:text-secondary-container underline-offset-4 hover:underline font-bold transition-colors" href="#signin">
+          Нэвтрэх
+        </a>
+</div>
+<!-- Quick Legal Notice -->
+<p class="text-center font-label-sm text-[10px] text-outline mt-3 leading-tight">
+        Үргэлжлүүлснээр та манай <a class="underline hover:text-on-surface" href="#terms">Үйлчилгээний нөхцөл</a> болон <a class="underline hover:text-on-surface" href="#privacy">Нууцлалын бодлогыг</a> зөвшөөрч буйд тооцогдоно.
+      </p>
+<!-- Bottom home indicator bar for mobile feel -->
+<div class="w-32 h-1 bg-outline-variant/60 rounded-full mx-auto mt-4"></div>
+</footer>
+</main>
+<!-- Interactive Slide Script -->
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
+    const dots = document.querySelectorAll('.carousel-dot');
+    const totalSlides = slides.length;
+
+    function goToSlide(index) {
+      currentSlide = index;
+      slides.forEach((slide, i) => {
+        if (i === currentSlide) {
+          slide.classList.remove('hidden');
+          slide.classList.add('block');
+        } else {
+          slide.classList.add('hidden');
+          slide.classList.remove('block');
+        }
+      });
+
+      dots.forEach((dot, i) => {
+        if (i === currentSlide) {
+          dot.classList.remove('w-1.5', 'bg-outline-variant');
+          dot.classList.add('w-6', 'bg-primary');
+        } else {
+          dot.classList.remove('w-6', 'bg-primary');
+          dot.classList.add('w-1.5', 'bg-outline-variant');
+        }
+      });
+    }
+
+    // Auto rotate every 3.8 seconds for dynamic onboarding feel
+    setInterval(() => {
+      let nextIndex = (currentSlide + 1) % totalSlides;
+      goToSlide(nextIndex);
+    }, 3800);
+  </script>
+</body></html>

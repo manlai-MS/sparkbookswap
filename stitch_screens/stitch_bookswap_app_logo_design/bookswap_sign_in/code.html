@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="mn"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BOOKSWAP - Нэвтрэх</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Fonts: Space Grotesk & Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-secondary-container": "#fffbff",
+            "outline-variant": "#bcc9c6",
+            "secondary-fixed-dim": "#ddb8ff",
+            "inverse-on-surface": "#eef0ff",
+            "on-secondary-fixed": "#2c0051",
+            "surface-container": "#eaedff",
+            "on-primary-container": "#f4fffc",
+            "on-surface-variant": "#3d4947",
+            "tertiary-fixed": "#71f8e4",
+            "surface-container-lowest": "#ffffff",
+            "on-primary-fixed": "#00201d",
+            "on-primary-fixed-variant": "#005049",
+            "error": "#ba1a1a",
+            "inverse-primary": "#6bd8cb",
+            "tertiary-container": "#008376",
+            "surface-container-high": "#e2e7ff",
+            "inverse-surface": "#283044",
+            "on-tertiary-container": "#f4fffb",
+            "on-primary": "#ffffff",
+            "surface": "#faf8ff",
+            "surface-tint": "#006a61",
+            "primary-fixed": "#89f5e7",
+            "primary-fixed-dim": "#6bd8cb",
+            "primary": "#00685f",
+            "on-surface": "#131b2e",
+            "on-tertiary-fixed-variant": "#005048",
+            "on-tertiary": "#ffffff",
+            "on-background": "#131b2e",
+            "surface-dim": "#d2d9f4",
+            "primary-container": "#008378",
+            "secondary-fixed": "#f0dbff",
+            "background": "#faf8ff",
+            "tertiary-fixed-dim": "#4fdbc8",
+            "on-error": "#ffffff",
+            "surface-bright": "#faf8ff",
+            "on-secondary": "#ffffff",
+            "tertiary": "#00685d",
+            "on-error-container": "#93000a",
+            "on-secondary-fixed-variant": "#6800b4",
+            "secondary-container": "#9e41f5",
+            "surface-container-low": "#f2f3ff",
+            "surface-variant": "#dae2fd",
+            "surface-container-highest": "#dae2fd",
+            "outline": "#6d7a77",
+            "secondary": "#831ada",
+            "on-tertiary-fixed": "#00201c",
+            "error-container": "#ffdad6"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-lg": "1.5rem",
+            "space-md": "1rem",
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "gutter": "1.5rem",
+            "gutter-mobile": "1rem",
+            "margin": "3rem",
+            "space-xl": "2.5rem",
+            "margin-mobile": "1.25rem"
+          },
+          "fontFamily": {
+            "body-sm": ["Plus Jakarta Sans"],
+            "title-md": ["Space Grotesk"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "label-lg": ["Space Grotesk"],
+            "headline-lg": ["Space Grotesk"],
+            "body-md": ["Plus Jakarta Sans"],
+            "display-xl": ["Space Grotesk"],
+            "headline-md": ["Space Grotesk"],
+            "headline-lg-mobile": ["Space Grotesk"],
+            "display-xl-mobile": ["Space Grotesk"],
+            "headline-sm": ["Space Grotesk"],
+            "label-sm": ["Space Grotesk"],
+            "label-md": ["Space Grotesk"]
+          },
+          "fontSize": {
+            "body-sm": ["13px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400"}],
+            "title-md": ["18px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600"}],
+            "body-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+            "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+            "headline-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+            "body-md": ["15px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400"}],
+            "display-xl": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "700"}],
+            "headline-md": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+            "headline-lg-mobile": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+            "display-xl-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+            "headline-sm": ["22px", {"lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "600"}],
+            "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "700"}],
+            "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600"}]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    
+    .glass-surface {
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      box-shadow: 0 16px 36px -6px rgba(131, 26, 218, 0.08), 0 4px 16px -2px rgba(0, 104, 95, 0.06);
+    }
+    
+    .aurora-bg {
+      background-color: #faf8ff;
+      background-image: 
+        radial-gradient(circle at 15% 12%, rgba(137, 245, 231, 0.45) 0%, transparent 45%),
+        radial-gradient(circle at 85% 18%, rgba(240, 219, 255, 0.7) 0%, transparent 48%),
+        radial-gradient(circle at 50% 88%, rgba(240, 219, 255, 0.4) 0%, transparent 55%),
+        radial-gradient(circle at 80% 80%, rgba(107, 216, 203, 0.25) 0%, transparent 40%);
+    }
+
+    .cta-gradient {
+      background: linear-gradient(135deg, #008378 0%, #00685f 45%, #831ada 100%);
+    }
+
+    .cta-gradient:hover {
+      background: linear-gradient(135deg, #00685f 0%, #005049 45%, #6800b4 100%);
+      box-shadow: 0 8px 24px -2px rgba(131, 26, 218, 0.35);
+    }
+
+    .tab-active-indicator {
+      background: linear-gradient(90deg, #008378, #831ada);
+    }
+  </style>
+</head>
+<body class="aurora-bg text-on-surface font-body-md text-body-md min-h-screen flex flex-col justify-between selection:bg-secondary-fixed selection:text-on-secondary-fixed antialiased">
+<!-- Ambient Decorative Ring Overlays -->
+<div class="fixed top-[-80px] -right-20 w-80 h-80 rounded-full bg-secondary-fixed/50 blur-3xl pointer-events-none -z-10"></div>
+<div class="fixed top-1/4 -left-24 w-72 h-72 rounded-full bg-primary-fixed/40 blur-3xl pointer-events-none -z-10"></div>
+<!-- Main Shell Container (Mobile constrained for exquisite aesthetic) -->
+<div class="w-full max-w-md mx-auto min-h-screen flex flex-col justify-between px-space-md sm:px-space-lg py-space-sm relative">
+<!-- Top Bar Navigation (Task-focused: Suppresses full global BottomNavBar per Destination Rule) -->
+<header class="w-full flex items-center justify-between pt-2 pb-3">
+<button aria-label="Буцах" class="w-10 h-10 rounded-full bg-surface-container-lowest/80 border border-surface-variant flex items-center justify-center text-on-surface hover:bg-surface-container-high transition-colors active:scale-95 duration-150" type="button">
+<span class="material-symbols-outlined text-[20px]">arrow_back</span>
+</button>
+<!-- Center Spark Team Pill -->
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-lowest/90 border border-secondary-fixed shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[16px]" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="font-label-sm text-label-sm tracking-widest text-secondary font-bold">SPARK TEAM</span>
+</div>
+<!-- Language / Help Action -->
+<button aria-label="Тусламж" class="w-10 h-10 rounded-full bg-surface-container-lowest/80 border border-surface-variant flex items-center justify-center text-on-surface hover:bg-surface-container-high transition-colors active:scale-95 duration-150" type="button">
+<span class="material-symbols-outlined text-[20px]">translate</span>
+</button>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 flex flex-col justify-center my-auto py-2">
+<!-- Brand Identity Card with Reference Logo -->
+<div class="flex flex-col items-center text-center mb-5">
+<div class="relative mb-3 group">
+<div class="absolute -inset-1 rounded-full bg-gradient-to-r from-primary to-secondary opacity-30 blur-md group-hover:opacity-50 transition duration-300"></div>
+<div class="relative w-24 h-24 rounded-full p-1 bg-surface-container-lowest shadow-md overflow-hidden border-2 border-secondary-fixed">
+<img alt="BOOKSWAP Official Logo by Spark Team" class="w-full h-full object-cover rounded-full" src="https://lh3.googleusercontent.com/aida/ALJJyrDTokCPg2zqB2YJEB-17sCWw2n1cSFRDqz0Ft9S7AJF0ut-JcZYmkZ-oYthryFvC5b2chcVGL_TuF4KAsyREUy-u-HL1nIMJO2NKg6NH9QkpDXvASJP53QbwTes92EfR0bufHUI5L3lu2P53YlQvkB0-SWiG5jyf6Kko6-zMU7d97sAGYkjpq3ikpzl_kPB84g53HSjP-nLmcPmESjJIbXQ_N_HRxYqqlreIaV0DXO-m6o3XcFFS-lFjzE"/>
+</div>
+<div class="absolute -bottom-1 -right-1 bg-primary text-on-primary rounded-full p-1 shadow">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+</div>
+</div>
+<div class="flex items-center gap-1 justify-center">
+<span class="font-headline-md text-headline-md tracking-tight font-extrabold text-secondary">BOOK</span>
+<span class="font-headline-md text-headline-md tracking-tight font-extrabold text-primary">SWAP</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 max-w-[280px]">
+          Өөрийн хайртай номоо солилцож, шинэ ертөнцөөр хамтдаа аялаарай.
+        </p>
+</div>
+<!-- Glassmorphic Auth Card -->
+<div class="glass-surface border border-surface-container-lowest/90 rounded-2xl p-5 sm:p-6 mb-4">
+<!-- Toggle Tabs: Нэвтрэх / Бүртгүүлэх -->
+<div class="relative grid grid-cols-2 p-1 bg-surface-container-low rounded-xl mb-5 text-center">
+<button class="relative z-10 py-2 rounded-lg bg-surface-container-lowest text-primary font-label-md text-label-md font-bold shadow-sm transition-all duration-200 flex items-center justify-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">login</span>
+<span>Нэвтрэх</span>
+</button>
+<button class="relative z-10 py-2 rounded-lg text-on-surface-variant font-label-md text-label-md hover:text-secondary transition-colors duration-150 flex items-center justify-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]">person_add</span>
+<span>Бүртгүүлэх</span>
+</button>
+</div>
+<!-- Form Elements -->
+<form class="space-y-4" onsubmit="event.preventDefault();">
+<!-- Identifier Input -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1.5 font-semibold" for="identifier">
+              Утасны дугаар эсвэл И-мэйл
+            </label>
+<div class="relative flex items-center">
+<span class="absolute left-3.5 text-outline pointer-events-none flex items-center">
+<span class="material-symbols-outlined text-[20px]">alternate_email</span>
+</span>
+<input class="w-full pl-11 pr-4 py-2.5 bg-surface-container-lowest border border-outline-variant/60 rounded-xl text-on-surface placeholder:text-outline-variant font-body-md text-body-md focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-150" id="identifier" placeholder="жишээ: 99112233 эсвэл nom@spark.mn" type="text"/>
+</div>
+</div>
+<!-- Password Input -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1.5 font-semibold" for="password">
+              Нууц үг
+            </label>
+<div class="relative flex items-center">
+<span class="absolute left-3.5 text-outline pointer-events-none flex items-center">
+<span class="material-symbols-outlined text-[20px]">lock</span>
+</span>
+<input class="w-full pl-11 pr-11 py-2.5 bg-surface-container-lowest border border-outline-variant/60 rounded-xl text-on-surface placeholder:text-outline-variant font-body-md text-body-md focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-150" id="password" placeholder="••••••••••••" type="password"/>
+<button aria-label="Нууц үг харах" class="absolute right-3 text-outline hover:text-on-surface transition-colors p-1 flex items-center" id="togglePassword" type="button">
+<span class="material-symbols-outlined text-[20px]" id="eyeIcon">visibility</span>
+</button>
+</div>
+</div>
+<!-- Remember Me & Forgot Password Row -->
+<div class="flex items-center justify-between pt-1 text-body-sm font-body-sm">
+<label class="flex items-center gap-2 cursor-pointer select-none">
+<input checked="" class="w-4 h-4 rounded text-secondary focus:ring-secondary/30 border-outline-variant cursor-pointer transition-colors" type="checkbox"/>
+<span class="text-on-surface-variant font-medium">Намайг санах</span>
+</label>
+<a class="font-label-md text-label-md text-secondary hover:text-on-secondary-fixed-variant hover:underline font-semibold transition-colors" href="#forgot">
+              Нууц үг мартсан уу?
+            </a>
+</div>
+<!-- Primary Submit CTA -->
+<button class="w-full cta-gradient text-on-primary py-3 px-6 rounded-full font-label-lg text-label-lg tracking-wide flex items-center justify-center gap-2 shadow-lg hover:shadow-primary/25 active:scale-[0.98] transition-all duration-150 mt-2" type="submit">
+<span>Нэвтрэх</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</form>
+<!-- Divider with text -->
+<div class="relative my-5 text-center">
+<div class="absolute inset-0 flex items-center">
+<div class="w-full border-t border-surface-variant"></div>
+</div>
+<span class="relative bg-surface-container-lowest px-3 font-label-sm text-label-sm text-outline uppercase tracking-wider">
+            Эсвэл хялбар нэвтрэх
+          </span>
+</div>
+<!-- Social Authentication Trio -->
+<div class="grid grid-cols-3 gap-2.5">
+<!-- Google -->
+<button class="flex flex-col items-center justify-center py-2.5 px-2 bg-surface-container-lowest border border-outline-variant/60 rounded-xl hover:bg-surface-container-high transition-all active:scale-95 duration-150" type="button">
+<svg class="w-5 h-5 mb-0.5" viewbox="0 0 24 24">
+<path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path>
+<path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"></path>
+<path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"></path>
+<path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"></path>
+</svg>
+<span class="font-label-sm text-[10px] text-on-surface font-semibold">Google</span>
+</button>
+<!-- Apple -->
+<button class="flex flex-col items-center justify-center py-2.5 px-2 bg-surface-container-lowest border border-outline-variant/60 rounded-xl hover:bg-surface-container-high transition-all active:scale-95 duration-150" type="button">
+<svg class="w-5 h-5 mb-0.5 fill-current text-on-surface" viewbox="0 0 170 170">
+<path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.42-6.08-3.69-3.08-7.7-7.94-12.04-14.58-6.19-9.49-10.88-20.2-14.07-32.14-3.18-11.95-4.78-23.27-4.78-33.97 0-14.73 3.65-27.06 10.95-36.99 7.3-9.93 16.59-15.02 27.87-15.28 5.76 0 12.18 1.63 19.26 4.91 7.08 3.28 11.58 4.96 13.5 5.04 1.54 0 6.13-1.74 13.78-5.22 7.64-3.48 13.75-4.99 18.32-4.54 13.54 1.07 24.38 6.56 32.53 16.48-11.83 7.15-17.61 16.89-17.35 29.21.26 9.71 4.1 17.89 11.53 24.52 7.42 6.63 16.27 10.37 26.54 11.21-2.22 6.84-5.07 13.74-8.57 20.71zM119.22 33.15c0-7.39 2.67-14.4 8.01-21.03 5.34-6.64 12.02-10.98 20.04-13.02.26 1.07.39 2.15.39 3.23 0 7.39-2.77 14.54-8.31 21.46-5.54 6.91-12.35 11.22-20.43 12.92-.17-1.12-.26-2.18-.26-3.19z"></path>
+</svg>
+<span class="font-label-sm text-[10px] text-on-surface font-semibold">Apple</span>
+</button>
+<!-- Dan / Digital ID -->
+<button class="flex flex-col items-center justify-center py-2.5 px-2 bg-surface-container-lowest border border-outline-variant/60 rounded-xl hover:bg-surface-container-high transition-all active:scale-95 duration-150 group" type="button">
+<span class="material-symbols-outlined text-[20px] text-primary group-hover:scale-110 transition-transform">fingerprint</span>
+<span class="font-label-sm text-[10px] text-on-surface font-semibold">ДАН систем</span>
+</button>
+</div>
+<!-- Phone OTP Quick alternative link -->
+<div class="mt-3.5 pt-3 border-t border-surface-variant/50 text-center">
+<button class="inline-flex items-center gap-1.5 text-primary hover:text-primary-container font-label-md text-label-md font-semibold transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">sms</span>
+<span>Нэг удаагийн кодоор (OTP) нэвтрэх</span>
+</button>
+</div>
+</div>
+<!-- Quick Signup Redirect Banner -->
+<div class="text-center py-2">
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Шинэ уншигч уу? 
+          <a class="font-label-lg text-label-lg font-bold text-secondary hover:text-on-secondary-fixed-variant hover:underline transition-colors ml-1 inline-flex items-center" href="#register">
+            Бүртгүүлэх
+            <span class="material-symbols-outlined text-[16px] ml-0.5">trending_flat</span>
+</a>
+</p>
+</div>
+</main>
+<!-- Footer Disclaimer & Home Touch Indicator -->
+<footer class="w-full text-center pb-2 pt-1 flex flex-col items-center gap-2">
+<p class="text-[11px] leading-tight text-outline max-w-xs font-body-sm">
+        Нэвтэрснээр та манай 
+        <a class="underline hover:text-on-surface" href="#terms">Үйлчилгээний нөхцөл</a> 
+        болон 
+        <a class="underline hover:text-on-surface" href="#privacy">Нууцлалын бодлого</a>-ыг зөвшөөрсөнд тооцно.
+      </p>
+<!-- Spark dual-brand color accent indicator -->
+<div class="flex items-center gap-1 mt-1">
+<span class="w-8 h-1 rounded-full bg-primary"></span>
+<span class="w-2 h-2 rounded-full bg-secondary-fixed border border-secondary"></span>
+<span class="w-8 h-1 rounded-full bg-secondary"></span>
+</div>
+<!-- iOS Style Home Bar Indicator -->
+<div class="w-32 h-1 bg-on-surface/20 rounded-full mt-1"></div>
+</footer>
+</div>
+<!-- Interactive JavaScript for micro-interactions -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const togglePasswordBtn = document.getElementById('togglePassword');
+      const passwordInput = document.getElementById('password');
+      const eyeIcon = document.getElementById('eyeIcon');
+
+      if (togglePasswordBtn && passwordInput && eyeIcon) {
+        togglePasswordBtn.addEventListener('click', () => {
+          const isPassword = passwordInput.getAttribute('type') === 'password';
+          passwordInput.setAttribute('type', isPassword ? 'text' : 'password');
+          eyeIcon.textContent = isPassword ? 'visibility_off' : 'visibility';
+        });
+      }
+    });
+  </script>
+</body></html>
